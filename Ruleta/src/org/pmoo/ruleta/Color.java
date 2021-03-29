@@ -12,5 +12,5 @@ public class Color extends Apuesta {
 	}
 	//Métodos
 	//test
-	
+	//test2
 }
