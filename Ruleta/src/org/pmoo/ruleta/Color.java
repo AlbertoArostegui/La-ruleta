@@ -6,8 +6,9 @@ public class Color extends Apuesta {
 	private double multiplicador;
 	
 	//Constructora
-	public Apuesta() {
-		
+	public Color(String pColor, double pMultiplicador ) {
+		super(pMultiplicador);
+		this.color = pColor;
 	}
 	//Métodos
 }

@@ -5,7 +5,9 @@ public abstract class Apuesta {
 	private double multiplicador;
 	
 	//Constructora
-	
+	public Apuesta(double pMultiplicador) {
+		this.multiplicador = pMultiplicador;
+	}
 	//Métodos
 	public void imprimir()  {
 		
