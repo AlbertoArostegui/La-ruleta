@@ -11,4 +11,6 @@ public class Color extends Apuesta {
 		this.color = pColor;
 	}
 	//Métodos
+	//test
+	
 }
