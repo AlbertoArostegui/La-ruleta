@@ -12,7 +12,7 @@ public class Juego {
 	public void jugar() {
 		
 	}
-	public repartirPremios() {
+	public void repartirPremios() {
 		
 	}
 	//Falta hacerApuestas() aquí
