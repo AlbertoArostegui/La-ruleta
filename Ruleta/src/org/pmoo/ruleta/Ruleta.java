@@ -21,8 +21,8 @@ public class Ruleta {
 		return miRuleta;
 	}
 	public int girarRuleta() {
-		int numero;
-		
+		Random rand = new Random();	   //Clase random para generar números aleatorios desde rand
+		int numero = rand.nextInt(35); //método para generar número aleatorio
 		
 		return numero;
 	}

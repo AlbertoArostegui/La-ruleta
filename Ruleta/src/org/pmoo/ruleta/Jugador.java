@@ -1,5 +1,8 @@
 package org.pmoo.ruleta;
 
+import java.util.*;
+import org.pmoo.ruleta.*;
+
 public class Jugador {
 	//Atributos
 	private ListaFichas fichas;
@@ -19,9 +22,10 @@ public class Jugador {
 	}
 	
 	public void comprarFichas() {
-		double dineroAComprar = 0;			//Mirar como preguntar por un double o convertirlo sino
-		//Preguntar cuanto dinero quiere comprar
-		double valorEnFichas = dineroAComprar * 10;
+		Scanner sc = new Scanner(System.in);	//Mirar como preguntar por un double o convertirlo si no
+		System.out.println("Introduzca el dinero que quiere invertir");
+		int dineroAComprar = sc.nextInt();			//Preguntar cuanto dinero quiere comprar
+		int valorEnFichas = dineroAComprar * 10;
 		this.fichas.incrementarFichas(valorEnFichas);
 	}
 	
