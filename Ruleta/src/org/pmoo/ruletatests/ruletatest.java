@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.pmoo.ruleta.Ficha;
+import org.pmoo.ruleta.*;
 
 public class ruletatest {
 
