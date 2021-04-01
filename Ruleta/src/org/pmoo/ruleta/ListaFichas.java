@@ -25,4 +25,14 @@ public class ListaFichas {
 	public int valorFichasApostadas( ) {
 		
 	}
+	public void imprimirFichas() {
+		Iterator<Ficha> itr = getIterador();
+		Ficha unaFicha;
+		
+		while (itr.hasNext()) {
+			unaFicha = itr.next();
+			
+			unaFicha.imprimir
+		}
+	}
 }

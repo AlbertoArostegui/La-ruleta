@@ -8,4 +8,8 @@ public class ListaApuestas {
 		
 	}
 	//Métodos
+	
+	public void realizarApuestas() {
+		
+	}
 }
