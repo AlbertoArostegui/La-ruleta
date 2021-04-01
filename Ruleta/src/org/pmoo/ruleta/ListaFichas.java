@@ -32,7 +32,7 @@ public class ListaFichas {
 		while (itr.hasNext()) {
 			unaFicha = itr.next();
 			
-			unaFicha.imprimir
+			unaFicha.imprimir();
 		}
 	}
 }

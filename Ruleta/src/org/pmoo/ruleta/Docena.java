@@ -5,8 +5,9 @@ public class Docena extends Apuesta{
 	private int docena;
 	
 	//Constructora
-	public Apuesta() {
-		
+	public Docena(double pMultiplicador, int pDocena) {
+		super(pMultiplicador);
+		this.docena = pDocena;
 	}
 	//Métodos
 }
