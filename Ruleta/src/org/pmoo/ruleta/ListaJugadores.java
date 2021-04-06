@@ -60,4 +60,40 @@ public class ListaJugadores {
 		}
 	}
 	
+	public void repartirPremios(int pNumeroPremiado) {
+		Iterator<Jugador> itr = this.getIterador();
+		Jugador actual = null;
+		while(itr.hasNext()) {
+			actual = itr.next();
+			actual.recogerPremio(pNumeroPremiado);
+		}
+	}
+	
+	public void preguntarSiContinuarJugandoCincoRondasMas() {
+		Iterator<Jugador> itr = this.getIterador();
+		Jugador actual = null;
+		boolean jugar;
+		while(itr.hasNext()) {
+			actual = itr.next();
+			System.out.println(actual.getNombre());
+			jugar = Teclado.getTeclado().leerSiNo("Quieres seguir jugando 5 rondas mas?");
+			if (!jugar) {
+				actual.canjearFichas();
+				this.Lista.remove(actual);
+			}
+		}
+	}
+	
+	public void anadirJugador(Jugador pNuevoJugador) {
+		this.Lista.add(pNuevoJugador);
+	}
+	
+	public boolean quedaAlgunJugador() {
+		boolean queda = false;
+		if (this.Lista.size()>0) {
+			queda = true;
+		}
+		return queda;
+	}
+	
 }

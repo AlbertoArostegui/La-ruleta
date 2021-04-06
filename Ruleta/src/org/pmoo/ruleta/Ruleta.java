@@ -1,30 +1,27 @@
 package org.pmoo.ruleta;
-
 import java.util.Random;
+
+
 
 public class Ruleta {
 	//Atributos
-	private int numero;
-	private static Ruleta miRuleta;
-	
-	
+	private int nNumeros;
+	private static Ruleta miRuleta = null;
 	//Constructora
 	private Ruleta() {
-		
+		this.nNumeros = 37;
 	}
 	//Métodos
-	
-	public Ruleta getMiRuleta()	{
-		if (miRuleta == null) {
-			this.miRuleta = new Ruleta();
+	public static Ruleta getRuleta() {
+		if (Ruleta.miRuleta==null) {
+			Ruleta.miRuleta = new Ruleta();
 		}
 		return miRuleta;
 	}
-	public int girarRuleta() {
-		Random rand = new Random();	   //Clase random para generar números aleatorios desde rand
-		int numero = rand.nextInt(35); //método para generar número aleatorio
-		
-		return numero;
-	}
 	
+	public int girarRuleta(){
+	   Random r = new Random();
+	   int tirada = r.nextInt(this.nNumeros);
+	   return tirada;
+	}
 }

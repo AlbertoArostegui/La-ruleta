@@ -2,12 +2,21 @@ package org.pmoo.ruleta;
 
 public class Numero extends Apuesta {
 	//Atributos
-	private int numero;
 	
 	//Constructora
-	public Numero(double pMultiplicador, int pNumero) {
-		super(pMultiplicador);
-		this.numero = pNumero;
+	public Numero(int pValorApuesta, int pCodigoApuesta) {
+		super(pValorApuesta, 36, pCodigoApuesta);
 	}
 	//Métodos
+	public int premio(int pNumeroPremiado) {
+		int premio = 0;
+		if (pNumeroPremiado == this.codigo) {
+			premio = this.devolverPremio();
+		}
+		
+		else {
+			Banca.getBanca().recogerGanancias(this.valor.valorFichasEnPosesion());
+		}
+		return premio;
+	}
 }
