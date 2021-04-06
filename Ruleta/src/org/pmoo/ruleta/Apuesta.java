@@ -5,8 +5,9 @@ public abstract class Apuesta {
 	ListaFichas valor;
 	int multiplicador;
 	int codigo;
+	
 	//Constructora
-	public Apuesta (int pValorApuesta, int pMultiplicador, int pCodigoApuesta) {
+	public Apuesta(int pValorApuesta, int pMultiplicador, int pCodigoApuesta) {
 		this.valor = new ListaFichas();
 		this.valor.incrementarFichas(pValorApuesta);
 		this.multiplicador = pMultiplicador;
@@ -19,4 +20,4 @@ public abstract class Apuesta {
 	}
 	
 	public abstract int premio(int pNumeroPremiado);
-}
+	}
