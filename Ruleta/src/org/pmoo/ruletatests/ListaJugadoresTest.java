@@ -16,52 +16,85 @@ public class ListaJugadoresTest {
 	
 	@Before
 	public void setUp() throws Exception {
+		
+		j1 = new Jugador("Alberto", 1000);
+		j2 = new Jugador("David", 13000);
+		j3 = new Jugador("Alvaro", 20000);
+		lj1 = ListaJugadores.getListaJugadores();
+	
+		
 	}
 
 	@After
 	public void tearDown() throws Exception {
 		j1 = null;
 		j2 = null;
+		j3 = null;
+		lj1 = null;
 	}
 
 	@Test
 	public void testGetListaJugadores() {
-		fail("Not yet implemented");
+		assertNotNull(lj1);
 	}
 
 	@Test
 	public void testHacerApuestas() {
-		fail("Not yet implemented");
+		lj1.anadirJugador(j1);
+		lj1.anadirJugador(j2);
+		lj1.anadirJugador(j3);
+		lj1.hacerApuestas();
+		
+		
 	}
 
 	@Test
 	public void testComprarFichas() {
-		fail("Not yet implemented");
+		lj1.anadirJugador(j1);
+		lj1.anadirJugador(j2);
+		lj1.anadirJugador(j3);
+		lj1.comprarFichas();
 	}
 
 	@Test
 	public void testImprimirEstados() {
-		fail("Not yet implemented");
+		lj1.anadirJugador(j1);
+		lj1.anadirJugador(j2);
+		lj1.anadirJugador(j3);
+		lj1.imprimirEstados();
 	}
 
 	@Test
-	public void testImprimirApuestas() {
-		fail("Not yet implemented");
+	public void testImprimirApuestas() {	
+		lj1.anadirJugador(j1);
+		lj1.anadirJugador(j2);
+		lj1.anadirJugador(j3);
+		lj1.imprimirApuestas();
 	}
 
 	@Test
 	public void testRepartirPremios() {
-		fail("Not yet implemented");
+		lj1.anadirJugador(j1);
+		lj1.anadirJugador(j2);
+		lj1.anadirJugador(j3);
+		lj1.repartirPremios(2);
 	}
 
 	@Test
-	public void testPreguntarSiContinuarJugandoCincoRondasMas() {
-		fail("Not yet implemented");
+	public void testPreguntarSiContinuarJugandoMas() {
+		lj1.anadirJugador(j1);
+		lj1.anadirJugador(j2);
+		lj1.anadirJugador(j3);
+		lj1.preguntarSiContinuarJugandoMas();
 	}
 
 	@Test
 	public void testAnadirJugador() {
-		fail("Not yet implemented");
+		lj1.anadirJugador(j1);
+		lj1.anadirJugador(j2);
+		lj1.anadirJugador(j3);
+		
+		assertNotNull(lj1.getListaJugadores());
 	}
 
 	@Test

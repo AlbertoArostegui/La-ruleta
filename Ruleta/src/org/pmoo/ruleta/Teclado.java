@@ -87,11 +87,11 @@ public class Teclado {
 				teclado.nextLine();
 			}
 			stringIncorrecta = false;
-			if (SiNo!="Si"&&SiNo!="si"&&SiNo!="No"&&SiNo!="no") {
+			/*if (SiNo!="Si"&&SiNo!="si"&&SiNo!="No"&&SiNo!="no") {
 				System.out.println("El valor introducido no es valido.");
 				stringIncorrecta = true;
 				teclado.nextLine();
-			}
+			}*/
 		} while (falla || stringIncorrecta);
 		teclado.close();
 		if (SiNo=="Si"||SiNo=="si") {

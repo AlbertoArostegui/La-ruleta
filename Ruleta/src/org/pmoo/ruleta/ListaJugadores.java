@@ -5,12 +5,12 @@ import java.util.Iterator;
 
 public class ListaJugadores {
 	//Atributos
-	private ArrayList<Jugador> Lista;
+	private ArrayList<Jugador> lista;
 	private static ListaJugadores miLista;
 	
 	//Constructora
 	private ListaJugadores() {
-		
+		this.lista = new ArrayList<Jugador>();
 	}
 	//Métodos
 	public static ListaJugadores getListaJugadores() {
@@ -21,7 +21,7 @@ public class ListaJugadores {
 	}
 	
 	private Iterator<Jugador> getIterador(){
-		return ListaJugadores.getListaJugadores().Lista.iterator();
+		return ListaJugadores.getListaJugadores().lista.iterator();
 	}
 	
 	public void hacerApuestas() {
@@ -69,7 +69,7 @@ public class ListaJugadores {
 		}
 	}
 	
-	public void preguntarSiContinuarJugandoCincoRondasMas() {
+	public void preguntarSiContinuarJugandoMas() {
 		Iterator<Jugador> itr = this.getIterador();
 		Jugador actual = null;
 		boolean jugar;
@@ -79,18 +79,18 @@ public class ListaJugadores {
 			jugar = Teclado.getTeclado().leerSiNo("Quieres seguir jugando 5 rondas mas?");
 			if (!jugar) {
 				actual.canjearFichas();
-				this.Lista.remove(actual);
+				this.lista.remove(actual);
 			}
 		}
 	}
 	
 	public void anadirJugador(Jugador pNuevoJugador) {
-		this.Lista.add(pNuevoJugador);
+		this.lista.add(pNuevoJugador);
 	}
 	
 	public boolean quedaAlgunJugador() {
 		boolean queda = false;
-		if (this.Lista.size()>0) {
+		if (this.lista.size()>0) {
 			queda = true;
 		}
 		return queda;
