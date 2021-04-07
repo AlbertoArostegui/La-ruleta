@@ -1,4 +1,5 @@
-package org.pmoo.ruletatests;
+package org.pmoo.ruletatests; 
+import org.pmoo.ruleta.*;
 
 import static org.junit.Assert.*;
 import org.pmoo.ruleta.*;
@@ -40,32 +41,37 @@ public class JugadorTest {
 
 	@Test
 	public void testGetNombre() {
-		fail("Not yet implemented");
+	
+		assertEquals(j1.getNombre(), "Alberto");
+		assertEquals(j2.getNombre(), "David");
+	
 	}
 
 	@Test
 	public void testHacerApuesta() {
-		fail("Not yet implemented");
+		j1.hacerApuesta();
 	}
 
 	@Test
 	public void testComprarFichas() {
-		fail("Not yet implemented");
+		/*j1.comprarFichas();
+		
+		j1.imprimirEstado();*/
 	}
 
 	@Test
 	public void testImprimirEstado() {
-		fail("Not yet implemented");
+		j1.imprimirEstado();
 	}
 
 	@Test
 	public void testImprimirApuestas() {
-		fail("Not yet implemented");
+		j1.imprimirApuestas();
 	}
 
 	@Test
 	public void testRecogerPremio() {
-		fail("Not yet implemented");
+	
 	}
 
 	@Test

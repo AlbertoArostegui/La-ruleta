@@ -1,4 +1,5 @@
-package org.pmoo.ruletatests;
+package org.pmoo.ruletatests; 
+import org.pmoo.ruleta.*;
 
 import static org.junit.Assert.*;
 import org.pmoo.ruleta.*;
@@ -45,12 +46,14 @@ public class TecladoTest {
 
 	@Test
 	public void testLeerSiNo() {
-		fail("Not yet implemented");
+		System.out.print(t.leerSiNo("Hay algun jugador más que quiera registrarse?"));
 	}
 
 	@Test
 	public void testLeerString() {
 		fail("Not yet implemented");
 	}
-
 }
+
+
+

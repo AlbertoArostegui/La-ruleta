@@ -1,4 +1,5 @@
-package org.pmoo.ruletatests;
+package org.pmoo.ruletatests; 
+import org.pmoo.ruleta.*;
 
 import static org.junit.Assert.*;
 import org.pmoo.ruleta.*;

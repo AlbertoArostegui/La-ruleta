@@ -11,6 +11,7 @@ public class Jugador {
 		this.nombre = pNombre;
 		this.dinero = pDinero;
 		this.fichas = new ListaFichas();
+		this.apuestas = new ListaApuestas();
 	}
 	//Métodos
 	public String getNombre() {

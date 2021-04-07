@@ -1,4 +1,5 @@
 package org.pmoo.ruletatests; 
+import org.pmoo.ruleta.*; 
 
 import org.pmoo.ruleta.*;
 

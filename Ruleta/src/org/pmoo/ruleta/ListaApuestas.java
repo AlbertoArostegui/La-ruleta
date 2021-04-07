@@ -83,7 +83,7 @@ public class ListaApuestas {
 		Iterator<Apuesta> itr = this.getIterador();
 		while (itr.hasNext()) {
 			actual = itr.next();
-			premioTotal = actual.premio(pNumeroPremiado);
+			premioTotal = premioTotal + actual.premio(pNumeroPremiado);
 		}
 		return premioTotal;
 	}
