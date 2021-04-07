@@ -46,14 +46,15 @@ public class TecladoTest {
 
 	@Test
 	public void testLeerSiNo() {
-		System.out.print(t.leerSiNo("Hay algun jugador más que quiera registrarse?"));
+		assertEquals(t.leerSiNo("si"), true);
 	}
 
 	@Test
 	public void testLeerString() {
-		fail("Not yet implemented");
+		assertEquals(t.leerString("Como te llamas?"), "Como te llamas?");
 	}
 }
+
 
 
 

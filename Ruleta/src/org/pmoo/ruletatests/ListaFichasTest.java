@@ -12,9 +12,17 @@ public class ListaFichasTest {
 	Ficha f1;
 	Ficha f2;
 	Ficha f3;
+	ListaFichas lf1;
 	
 	@Before
 	public void setUp() throws Exception {
+		f1 = new Ficha(1,2);
+		f2 = new Ficha(3, 5);
+		f3 = new Ficha(8, 1);
+		lf1 = new ListaFichas();
+
+		lf1.incrementarFichas(f1.getValor());
+		lf1.incrementarFichas(f2.getValor());
 	}
 
 	@After
@@ -23,33 +31,27 @@ public class ListaFichasTest {
 	}
 
 	@Test
-	public void testListaFichas() {
-		fail("Not yet implemented");
-	}
-
-	@Test
 	public void testIncrementarFichas() {
-		fail("Not yet implemented");
+		lf1.incrementarFichas(f3.getValor());
+		assertEquals(lf1.valorFichasEnPosesion(), f1.getValor() + f2.getValor() + f3.getValor());
 	}
 
 	@Test
 	public void testDecrementarFichas() {
-		fail("Not yet implemented");
+		lf1.decrementarFichas(f1.getValor());
+		
+		assertEquals(lf1.valorFichasEnPosesion(), f2.getValor());
 	}
 
 	@Test
 	public void testValorFichasEnPosesion() {
-		fail("Not yet implemented");
+		lf1.incrementarFichas(f3.getValor());
+		assertEquals(lf1.valorFichasEnPosesion(), f1.getValor() + f2.getValor() + f3.getValor());
 	}
 
 	@Test
 	public void testImprimirFichas() {
-		fail("Not yet implemented");
-	}
-
-	@Test
-	public void testResetear() {
-		fail("Not yet implemented");
+		lf1.imprimirFichas();
 	}
 
 }
