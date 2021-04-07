@@ -61,4 +61,10 @@ public class Jugador {
 		System.out.print("Despues de canjear las fichas tu dinero es el siguiente:");
 		System.out.println(this.dinero);
 	}
+	public ListaApuestas getListaApuestas() {
+		return this.apuestas;
+	}
+	public double getDinero() {
+		return this.dinero;
+	}
 }

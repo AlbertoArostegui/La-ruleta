@@ -77,7 +77,13 @@ public class ListaJugadoresTest {
 		lj1.anadirJugador(j1);
 		lj1.anadirJugador(j2);
 		lj1.anadirJugador(j3);
-		lj1.repartirPremios(2);
+		
+		Apuesta a1;
+		a1 = new Color(100, 1); //Simulamos que el jugador ha introducido cómo quiere la apuesta
+	
+		lj1.repartirPremios(11);//Con el código 1 y un número impar ganaríamos
+		j1.recogerPremio(11);
+		
 	}
 
 	@Test
@@ -99,7 +105,11 @@ public class ListaJugadoresTest {
 
 	@Test
 	public void testQuedaAlgunJugador() {
-		fail("Not yet implemented");
+		assertFalse(lj1.quedaAlgunJugador());
+		
+		lj1.anadirJugador(j1);
+		
+		assertTrue(lj1.quedaAlgunJugador());
 	}
 
 }

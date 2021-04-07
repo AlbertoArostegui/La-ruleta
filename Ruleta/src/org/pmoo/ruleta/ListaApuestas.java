@@ -140,4 +140,12 @@ public class ListaApuestas {
 	public void resetear() {
 		this.apuestas = new ArrayList<Apuesta>();
 	}
+	
+	public ArrayList<Apuesta> getApuestas() {
+		return this.apuestas;
+	}
+	
+	public void anadirApuesta(Apuesta pAp) {
+		this.apuestas.add(pAp);
+	}
 }

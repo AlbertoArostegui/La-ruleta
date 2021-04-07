@@ -26,27 +26,54 @@ public class ListaApuestasTest {
 
 	@Test
 	public void testListaApuestas() {
-		fail("Not yet implemented");
+		ListaApuestas l1 = new ListaApuestas();
+		
+		assertNotNull(l1);
 	}
 
 	@Test
 	public void testRealizarApuestas() {
-		fail("Not yet implemented");
+		ListaApuestas l1 = new ListaApuestas();
+		//para este test usaremos un método implementado excepcionalmente ya que no tenemos aquí el input del usuario
+		a1 = new Color(100, 1);
+		l1.anadirApuesta(a1);
+		
+		l1.realizarApuestas(100); //Apostamos con supuestas 100 fichas que poseería un jugador y que usaría en Color
+		
+		assertEquals(a1.premio(1), 200);
 	}
 
 	@Test
 	public void testRepartirPremios() {
-		fail("Not yet implemented");
+		ListaApuestas l1 = new ListaApuestas();
+		a1 = new Color(100, 1);
+		a2 = new Color(200, 2);
+		
+		l1.anadirApuesta(a1);
+		l1.anadirApuesta(a2);
+		
+		l1.repartirPremios(1);
+		
+		
 	}
 
 	@Test
 	public void testImprimirApuestas() {
-		fail("Not yet implemented");
+		ListaApuestas l1 = new ListaApuestas();
+		l1.imprimirApuestas();
+		
+		assertTrue(true);
 	}
 
 	@Test
 	public void testResetear() {
-		fail("Not yet implemented");
+		ListaApuestas l1 = new ListaApuestas();
+		
+		a1 = new Paridad(100, 1);
+		
+		l1.resetear();
+		
+		assertEquals(l1.getApuestas(), null);
 	}
 
 }

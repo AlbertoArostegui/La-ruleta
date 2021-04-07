@@ -49,14 +49,14 @@ public class JugadorTest {
 
 	@Test
 	public void testHacerApuesta() {
-		j1.hacerApuesta();
+		Apuesta a1 = new Color(100, 1);
 	}
 
 	@Test
 	public void testComprarFichas() {
-		/*j1.comprarFichas();
+		j1.comprarFichas();
 		
-		j1.imprimirEstado();*/
+		j1.imprimirEstado();
 	}
 
 	@Test
@@ -71,12 +71,20 @@ public class JugadorTest {
 
 	@Test
 	public void testRecogerPremio() {
-	
+		Apuesta a1 = new Color(100, 1); //Para este test se simulará que estamos haciendo esta apuesta con este jugador
+		
+		j1.recogerPremio(1);			//En una ejecución normal esto ejecutaría en la lista del jugador recogerPremio para cada apuesta, 
+										//aquí lo simularemos
+		assertEquals(200,a1.premio(1));
+		
 	}
 
 	@Test
 	public void testCanjearFichas() {
-		fail("Not yet implemented");
+		j1.comprarFichas(); //Compramos 1000 a 100 euros
+		j1.canjearFichas();
+		
+		assertEquals(j1.getDinero(), 10000, 0); //Para este test hemos implementado el metodo getDinero para poder realizar las comprobaciones
 	}
 
 }

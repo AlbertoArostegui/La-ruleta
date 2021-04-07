@@ -39,7 +39,7 @@ public class Juego {
 			ListaJugadores.getListaJugadores().repartirPremios(numeroPremiado);
 			ListaJugadores.getListaJugadores().imprimirEstados();
 			
-			ListaJugadores.getListaJugadores().preguntarSiContinuarJugandoCincoRondasMas();
+			ListaJugadores.getListaJugadores().preguntarSiContinuarJugandoMas();
 			continuar = ListaJugadores.getListaJugadores().quedaAlgunJugador();
 		}while (continuar);
 	}
