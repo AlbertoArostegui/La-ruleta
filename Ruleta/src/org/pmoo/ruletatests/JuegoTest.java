@@ -24,18 +24,14 @@ public class JuegoTest {
 
 	@Test
 	public void testGetJuego() {
-		Juego j2 = Juego.getJuego();
-		
-		assertNull(j1);
-		assertNotNull(j2);
+		j1 = Juego.getJuego();
 	}
 
 	@Test
 	public void testJugar() {
-		Juego j2 = Juego.getJuego();
 		
-		j2.Jugar();
-		j2.Jugar();
+		j1 = Juego.getJuego();
+		j1.Jugar();
 	}
 
 }
